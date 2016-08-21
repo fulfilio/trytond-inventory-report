@@ -106,13 +106,13 @@
                                   ">
                                       <td>{{ line.product.code }} - {{ line.product.name }}</td>
                                       <td class="text-right">
-                                        {{ formatLang(line.expected_quantity, inventory.company.party.lang, digits=line.unit_digits) }}
+                                        {{ format_number(line.expected_quantity, inventory.company.party.lang, digits=line.unit_digits) }}
                                         {% if line.uom.symbol != 'u' %}
                                             {{ line.uom.symbol }}
                                         {% endif %}
                                       </td>
                                       <td class="text-right">
-                                        {{ formatLang(line.quantity, inventory.company.party.lang, digits=line.unit_digits) }}
+                                        {{ format_number(line.quantity, inventory.company.party.lang, digits=line.unit_digits) }}
                                         {% if line.uom.symbol != 'u' %}
                                             {{ line.uom.symbol }}
                                         {% endif %}

@@ -102,7 +102,7 @@ class TestInventory(unittest.TestCase):
             'type': 'goods',
             'list_price': Decimal('2000'),
             'cost_price': Decimal('1500'),
-            'category': self.product_category.id,
+            'categories': [('add', [self.product_category.id])],
             'default_uom': self.uom,
         }])
 

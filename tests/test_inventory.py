@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
     tests/test_inventory.py
-    :copyright: (C) 2015 by Openlabs Technologies & Consulting (P) Limited
-    :license: BSD, see LICENSE for more details.
 """
 import unittest
 import datetime
@@ -104,7 +102,7 @@ class TestInventory(unittest.TestCase):
             'type': 'goods',
             'list_price': Decimal('2000'),
             'cost_price': Decimal('1500'),
-            'category': self.product_category.id,
+            'categories': [('add', [self.product_category.id])],
             'default_uom': self.uom,
         }])
 

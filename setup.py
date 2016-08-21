@@ -82,10 +82,12 @@ minor_version = int(minor_version)
 
 requires = []
 
-MODULE2PREFIX = {}
+MODULE2PREFIX = {
+    'report_webkit': 'openlabs'
+}
 
 MODULE = "inventory_report"
-PREFIX = "openlabs"
+PREFIX = "fio"
 for dep in info.get('depends', []):
     if not re.match(r'(ir|res|webdav)(\W|$)', dep):
         requires.append(
@@ -97,12 +99,6 @@ for dep in info.get('depends', []):
         )
 requires.append(
     'trytond >= %s.%s, < %s.%s' % (
-        major_version, minor_version, major_version, minor_version + 1
-    )
-)
-
-requires.append(
-    'openlabs_report_webkit >= %s.%s, < %s.%s' % (
         major_version, minor_version, major_version, minor_version + 1
     )
 )
